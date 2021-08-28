@@ -1,0 +1,7 @@
+Training program:
+    -
+
+
+Prediction program:
+    - parse parameters from parameters.txt file
+    - prompt the user for mileage
