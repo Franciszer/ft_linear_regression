@@ -1,4 +1,4 @@
-    The aim of this project is to predict a car's price according to its mileag using liner regression.
+The aim of this project is to predict a car's price according to its mileage using liner regression.
 
 There are two programs:  
 - a training program, which learns on the data.csv file in order to approximate the optimal parameter for the prediction function.
