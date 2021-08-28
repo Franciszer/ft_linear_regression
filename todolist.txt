@@ -1,12 +1,5 @@
 Training program:
-    -   parse the data.csv file
-    -   convert it to tensor format
     -   define the model
     -   define the loss function
     -   define the optimization algorithm
-
-
-Prediction program:
-    - parse parameters from parameters.txt file
-    - prompt the user for mileage
-    - output the estimated price
+    -   write parameters to parameters.txt file

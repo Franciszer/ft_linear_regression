@@ -16,6 +16,7 @@ def print_hi(name):
 def parse_parameters(path):
     text_file = open(path, 'r')
     file_data = text_file.read()
+    text_file.close()
     params = map(int, file_data.split(' '))
     return params
 
