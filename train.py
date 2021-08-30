@@ -2,6 +2,7 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import random
 
 import torch
 import matplotlib
@@ -62,7 +63,7 @@ if __name__ == '__main__':
     X = X.reshape(24, 1)
 
     w = torch.normal(0, 0.01, size=(1, 1), requires_grad=True, dtype=float)
-    b = torch.zeros(1, requires_grad=True, dtype=float)
+    b = torch.normal(0, 0.01, size=(1, 1), requires_grad=True, dtype=float)
 
     lr = 1e-12
     num_epochs = 100
@@ -78,11 +79,11 @@ if __name__ == '__main__':
         lsum.backward()
         sgd([w, b], lr, 24)
         results = loss(net(X, w, b), y)
-        print(f'epoch {epoch} loss {results.mean():f}')
+        print(f'epoch {epoch} loss {results.mean():f} w {w.detach().numpy()[0][0]} {b.detach().numpy()[0][0]}')
 
     results = loss(net(X, w, b), y)
-    print(f'prediction on training data:\n{torch.matmul(X, w) + b}')
-    print(f'w {w.detach().numpy()[0][0]}')
+    # print(f'prediction on training data:\n{torch.matmul(X, w) + b}')
+    print(f'w {w.detach().numpy()[0][0]}  b {b.detach().numpy()[0][0]}')
     # print(f'loss {results.mean():f}')
-    write_parameters('parameters.txt', w.detach().numpy()[0][0], b.detach().numpy()[0])
+    write_parameters('parameters.txt', w.detach().numpy()[0][0], b.detach().numpy()[0][0])
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
