@@ -7,12 +7,6 @@ import torch
 import argparse
 import sys
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-# def predict(w, b):
-
 def parse_parameters(path):
     text_file = open(path, 'r')
     file_data = text_file.read()
@@ -22,10 +16,6 @@ def parse_parameters(path):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser(description='Process floating point numbers')
-    #
-    # parser.add_argument("mileage", help="mileage of the car", type=float)
-    # args = parser.parse_args()
     try:
         mileage = float(input("Please enter the mileage of the car: "))
         if mileage < 0:
