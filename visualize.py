@@ -52,7 +52,7 @@ if __name__ == '__main__':
     inputs, outputs = data.iloc[:, 0], data.iloc[:, 1]
 
     # converting it to tensor format
-    X, y = torch.tensor(inputs.values), torch.tensor(outputs.values)
+    X, y = torch.tensor(inputs.values, dtype=float), torch.tensor(outputs.values, dtype=float)
 
     plt.scatter(X, y)
     xx = np.linspace(0, torch.max(X))
