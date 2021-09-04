@@ -1,5 +1,3 @@
-Training program:
-    -   define the model
-    -   define the loss function
-    -   define the optimization algorithm
-    -   write parameters to parameters.txt file
+Bonuses:
+    - make graph pretty
+    - find analytical solution to calculate precision of the algorithm

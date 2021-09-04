@@ -65,7 +65,7 @@ if __name__ == '__main__':
     lr = 1e-7
     sc_t0 = 1e5
     sc_t1 = 1e-5
-    num_epochs = 50000
+    num_epochs = 10000
     m = y.size
 
     for epoch in range(num_epochs):
